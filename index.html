@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beacon ID - Premium Black & White Shirt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">BEACON ID</div>
+            <div class="tagline">ELEGANCE IN PERSON</div>
+        </header>
+        
+        <section class="hero">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="produk.jpg" alt="Beacon ID | Classy Person" />
+                    <div class="product-badge">
+                        <span>LIMITED EDITION</span>
+                    </div>
+                </div>
+                
+                <div class="product-details">
+                    <h1 class="product-title">Beacon ID | Classy Person</h1>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.8 (1.2k reviews)</span>
+                    </div>
+                    <p class="product-description">
+                        Tshirt premium dengan bahan katun pilihan berkualitas tinggi yang nyaman dipakai seharian. 
+                        Desain minimalis elegan dengan jahitan presisi dan detail finishing mewah. 
+                        Tersedia dalam ukuran yang pas untuk penampilan sempurna.
+                    </p>
+                    
+                    <div class="price-container">
+                        <span class="original-price">Rp 150.000</span>
+                        <span class="discounted-price">Rp 75.000</span>
+                        <span class="discount-badge">50% OFF</span>
+                    </div>
+                    
+                    <div class="size-selector">
+                        <div class="size-title">Pilih Ukuran:</div>
+                        <div class="size-options">
+                            <div class="size-option" data-size="M">M</div>
+                            <div class="size-option" data-size="L">L</div>
+                            <div class="size-option" data-size="XL">XL</div>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="text" class="quantity-input" value="1" readonly>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    
+                    <button class="checkout-btn">
+                        <i class="fas fa-shopping-bag"></i> Checkout Sekarang
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Payment Options Selection -->
+            <div class="payment-options" id="paymentOptions">
+                <h2 class="payment-title">Pilih Metode Pembayaran</h2>
+                <div class="payment-buttons">
+                    <div class="payment-option-btn shopee-btn" data-payment="shopee">
+                        <div class="payment-icon">
+                            <img src="shopee.png" alt="Shopee Logo" />
+                        </div>
+                        <div class="payment-label">Via Shopee</div>
+                        <div class="shopee-price-info">
+                            <span class="shopee-original-price">Rp 75.000</span>
+                            <span class="shopee-discounted-price">Rp 65.000</span>
+                            <span class="shopee-discount-badge">EXTRA 13% OFF</span>
+                        </div>
+                    </div>
+                    <div class="payment-option-btn qris-btn" data-payment="qris">
+                        <div class="payment-icon">
+                            <img src="qris.png" alt="QRIS Logo" />
+                        </div>
+                        <div class="payment-label">Via QRIS</div>
+                    </div>
+                </div>
+                <button class="continue-btn" id="continueBtn" disabled>
+                    <i class="fas fa-arrow-right"></i> Lanjutkan
+                </button>
+            </div>
+            
+            <!-- Shopee Section -->
+            <div class="payment-section" id="shopeeSection">
+                <div class="shopee-redirect">
+                    <h3><i class="fas fa-shopping-cart"></i> Lanjut ke Toko Shopee Kami</h3>
+                    
+                    <div class="shopee-special-price">
+                        <h4><i class="fas fa-gift"></i> Penawaran Khusus Shopee!</h4>
+                        <div class="shopee-price-display">
+                            <span class="shopee-original-price">Rp 75.000</span>
+                            <span class="shopee-discounted-price">Rp 65.000</span>
+                            <span class="shopee-discount-badge">EXTRA 13% OFF</span>
+                        </div>
+                        <p style="margin-top: 10px; font-size: 0.9rem;">Hemat Rp 10.000 lebih dengan berbelanja di Shopee!</p>
+                    </div>
+                    
+                    <p style="margin-bottom: 20px;">Anda akan diarahkan ke toko resmi kami di Shopee untuk menyelesaikan pembelian dengan harga spesial.</p>
+                    <a href="https://shopee.co.id/beaconid" class="shopee-btn-redirect" id="shopeeRedirectBtn" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Buka Toko Shopee - Rp 65.000
+                    </a>
+                </div>
+            </div>
+            
+            <!-- QRIS Flow -->
+            <div class="checkout-form" id="checkoutForm">
+                <h2 class="form-title">Informasi Pengiriman</h2>
+                <form id="shippingForm">
+                    <div class="form-group">
+                        <label for="customerName" class="form-label">Nama Lengkap</label>
+                        <input type="text" id="customerName" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="form-label">Alamat Lengkap</label>
+                        <textarea id="address" class="form-input" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp" class="form-label">Nomor WhatsApp</label>
+                        <input type="tel" id="whatsapp" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                    <button type="submit" class="checkout-btn">
+                        <i class="fas fa-credit-card"></i> Lanjut ke Pembayaran
+                    </button>
+                </form>
+            </div>
+            
+            <div class="payment-section" id="paymentSection">
+                <h2 class="payment-section-title">Pembayaran via QRIS</h2>
+                <div class="qris-container">
+                    <div class="qris-placeholder">
+                        <img src="kode.jpg" alt="QRIS Code" />
+                    </div>
+                </div>
+                <p>Scan QR code di atas untuk melakukan pembayaran</p>
+                <button class="confirm-btn" id="confirmBtn">
+                    <i class="fab fa-whatsapp"></i> Konfirmasi via WhatsApp
+                </button>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">BEACON ID</div>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/beaconid_"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61576110569422"><i class="fab fa-facebook"></i></a>
+                <a href="https://wa.me/6287888261769?text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Beacon%20ID.%20Boleh%20minta%20informasinya%20lebih%20lanjut%3F"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 Beacon ID. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script-product.js"></script>
+    <script src="script-payment.js"></script>
+    <script src="script-validation.js"></script>
+    <script src="script-telegram.js"></script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'YOUR_PIXEL_ID'); // GANTI DENGAN ID PIXEL ANDA
+      fbq('track', 'PageView');
+      
+      // Track ViewContent event
+      fbq('track', 'ViewContent', {
+        content_name: 'Beacon ID | Classy Person',
+        content_category: 'Fashion',
+        content_ids: ['BEACON001'],
+        content_type: 'product',
+        value: 75000,
+        currency: 'IDR'
+      });
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" 
+           src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+</body>
+</html>
